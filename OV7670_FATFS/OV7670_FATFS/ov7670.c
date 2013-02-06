@@ -372,7 +372,7 @@ void LoadImageToBuffer( void )
 unsigned char FIFO_init(void)
 {
 	
-	DDRD |=(1<<FIFO_WEN)|(1<<FIFO_nRRST)|(1<<FIFO_RCLK)|(1 << FIFO_WRST) | (1 << FIFO_nOE);
+	OV7670_CTRL_DDR |=(1<<FIFO_WEN)|(1<<FIFO_nRRST)|(1<<FIFO_RCLK)|(1 << FIFO_WRST) | (1 << FIFO_nOE);
 	FIFO_WRST_CLR;
 	
 	FIFO_RCLK_CLR;
